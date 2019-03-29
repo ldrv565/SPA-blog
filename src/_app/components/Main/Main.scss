@@ -1,0 +1,13 @@
+@import "../variables.scss";
+
+.main {
+	flex-basis: 26 * $atom;
+	margin-left: 10 * $atom;
+	padding: $atom;
+	box-sizing: border-box;
+	color: $darkgrey;
+	@media ($medium) {
+		flex-basis: auto;
+		margin-left: 40px;
+	}
+}

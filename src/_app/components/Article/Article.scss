@@ -1,0 +1,12 @@
+@import "../variables.scss";
+
+.article {
+	&__head {
+		text-align: center;
+	}
+
+	&__footer {
+		text-align: center;
+		padding: 0.5 * $atom 0;
+	}
+}

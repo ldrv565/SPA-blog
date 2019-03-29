@@ -1,0 +1,10 @@
+@import "../variables.scss";
+
+$lightgray: #969696;
+
+.nav {
+	&__link {
+		color: $lightgray;
+		text-transform: uppercase;
+	}
+}

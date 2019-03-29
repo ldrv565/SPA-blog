@@ -1,12 +1,15 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
-import './App.style.scss';
+
+import Aside from './Aside/Aside';
+import Main from './Main/Main';
+
+import './App.scss';
 
 export const AppLayout = () => (
     <div className="app">
-        <span>
-            {'app'}
-        </span>
+        <Aside />
+        <Main />
     </div>
 );
 
