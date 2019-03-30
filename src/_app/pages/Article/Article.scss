@@ -1,4 +1,4 @@
-@import "../variables.scss";
+@import "../../components/variables.scss";
 
 .article {
 	&__head {
@@ -7,6 +7,6 @@
 
 	&__footer {
 		text-align: center;
-		padding: 0.5 * $atom 0;
+		padding-top: 0.5 * $atom;
 	}
 }

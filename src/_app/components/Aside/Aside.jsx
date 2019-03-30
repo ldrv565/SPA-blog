@@ -41,8 +41,11 @@ class Aside extends React.Component {
                         <Delimetr modifier="short" />
                         <Icons />
                     </section>
+                    {this.state.active
+                        && <BurgerButton active={this.state.active} onClick={this.handleAside} />}
                 </aside>
-                <BurgerButton active={this.state.active} onClick={this.handleAside} />
+                {!this.state.active
+                    && <BurgerButton active={this.state.active} onClick={this.handleAside} />}
             </React.Fragment>
         );
     }

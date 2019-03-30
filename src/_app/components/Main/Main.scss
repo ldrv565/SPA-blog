@@ -3,11 +3,18 @@
 .main {
 	flex-basis: 26 * $atom;
 	margin-left: 10 * $atom;
-	padding: $atom;
-	box-sizing: border-box;
 	color: $darkgrey;
 	@media ($medium) {
 		flex-basis: auto;
-		margin-left: 40px;
+		margin-left: $atom;
+		padding-left: 40px;
+	}
+}
+
+.container {
+	padding: $atom;
+	box-sizing: border-box;
+	@media ($medium) {
+		padding-left: 0;
 	}
 }

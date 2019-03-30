@@ -1,9 +1,10 @@
 import * as React from 'react';
+import classnames from 'classnames';
 
 import './Button.scss';
 
 const Button = props => (
-    <button className="button" type="button">
+    <button className={classnames('button', {[`--${props.modifier}`]: props.modifier})} type="button">
         {props.children}
     </button>
 );

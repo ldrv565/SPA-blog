@@ -1,9 +1,10 @@
 @import "../variables.scss";
 
-$lightgray: #9b9b9b;
+$lightgray: #d3d3d3;
 
 .button {
-	padding: 0.5 * $atom 1.25 * $atom;
+	padding: 0.4 * $atom 1.2 * $atom;
+	margin: 0.5 * $atom 0;
 	border-radius: 4px;
 	border-width: 1px;
 	font-family: "Roboto";
@@ -11,4 +12,14 @@ $lightgray: #9b9b9b;
 	background: white;
 	border: 1px solid $lightgray;
 	cursor: pointer;
+
+	&.--rounded {
+		padding: 0.25 * $atom 1 * $atom;
+		border-radius: 50px;
+	}
+
+	&:active {
+		background: $darkgrey;
+		color: $lightgray;
+	}
 }

@@ -7,11 +7,11 @@
 	&.--subtitle {
 		font-size: 24px;
 		@media ($extra_large) {
-			font-size: calc((100vw - 320px) / (1440 - 320) * (24 - 12) + 12px);
+			font-size: calc((100vw - 320px) / (1440 - 320) * (24 - 14) + 14px);
 		}
 	}
 
 	@media ($extra_large) {
-		font-size: calc((100vw - 320px) / (1440 - 320) * (36 - 12) + 12px);
+		font-size: calc((100vw - 320px) / (1440 - 320) * (36 - 14) + 14px);
 	}
 }

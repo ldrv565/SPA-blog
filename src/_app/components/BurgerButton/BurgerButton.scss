@@ -19,10 +19,11 @@ $lightgray: #9b9b9b;
 	cursor: pointer;
 
 	&.--active {
+		position: absolute;
 		background: white;
 		color: $darkgrey;
 		left: auto;
-		left: 300px;
+		right: $atom;
 	}
 
 	@media ($medium) {

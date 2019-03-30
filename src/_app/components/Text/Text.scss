@@ -9,6 +9,10 @@ $lightgray: #969696;
 		font-size: 14px;
 		color: $lightgray;
 		padding-bottom: 0.5 * $atom;
+
+		@media ($medium) {
+			font-size: 12px;
+		}
 	}
 
 	&.--note {
