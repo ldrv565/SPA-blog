@@ -17,12 +17,6 @@ class Articles extends React.Component {
 
         this.partLength = 10;
         this.loadMore = this.loadMore.bind(this);
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-
-    handleClick(id) {
-        return () => this.props.getPost(id);
     }
 
     loadMore() {
@@ -54,11 +48,7 @@ class Articles extends React.Component {
                                 <Text>
                                     {post.body}
                                 </Text>
-                                <LinkButton
-                                    link={`/article/${post.id}`}
-                                    modifier="rounded"
-                                    onClick={this.handleClick(post.id)}
-                                >
+                                <LinkButton link={`/article/${post.id}`} modifier="rounded">
                                     {'Countinue reading'}
                                 </LinkButton>
                                 <Delimetr />

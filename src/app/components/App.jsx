@@ -13,7 +13,7 @@ class App extends React.PureComponent {
 
     render() {
         return (
-            <Router>
+            <Router basename="/">
                 <section className="app">
                     <Aside />
                     <Main />
