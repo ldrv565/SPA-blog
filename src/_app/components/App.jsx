@@ -1,20 +1,29 @@
 import * as React from 'react';
-import {connect} from 'react-redux';
 import {BrowserRouter as Router} from 'react-router-dom';
 
 import Aside from './Aside/Aside';
 import Main from './Main/Main';
 
+import store from '../store';
+import {getPosts} from '../actions';
+
 import './App.scss';
 
-export const AppLayout = () => (
-    <Router>
-        <div className="app">
-            <Aside />
-            <Main />
-        </div>
-    </Router>
-);
+class App extends React.Component {
+    componentDidMount() {
+        store.dispatch(getPosts());
+    }
 
-const mapStateToProps = () => {};
-export const App = connect(mapStateToProps)(AppLayout);
+    render() {
+        return (
+            <Router>
+                <div className="app">
+                    <Aside />
+                    <Main />
+                </div>
+            </Router>
+        );
+    }
+}
+
+export default App;

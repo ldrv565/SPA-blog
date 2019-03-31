@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
 
 import './Article.scss';
 
@@ -7,20 +6,18 @@ import Title from '../../components/Title/Title';
 import Meta from '../../components/Meta/Meta';
 import Text from '../../components/Text/Text';
 import Delimetr from '../../components/Delimetr/Delimetr';
-import Button from '../../components/Button/Button';
+import LinkButton from '../../components/LinkButton/LinkButton';
 
 const Article = props => (
     <section className="container">
-        {!props.fetching
+        {!props.fetching && props.post.title
             ? (
                 <article className="article">
                     <section className="article__head">
                         <Title>
                             {props.post.title}
                         </Title>
-                        <Meta>
-                            {`MARCH ${props.post.id}, 2016 | TRAVEL`}
-                        </Meta>
+                        <Meta id={props.post.id} />
                         <Delimetr />
                     </section>
                     <section>
@@ -41,9 +38,7 @@ const Article = props => (
                         </Text>
                     </section>
                     <section className="article__footer">
-                        <Link to="/home" className="nav__link">
-                            <Button>View all posts</Button>
-                        </Link>
+                        <LinkButton link="/home">View all posts</LinkButton>
                     </section>
                 </article>
             )

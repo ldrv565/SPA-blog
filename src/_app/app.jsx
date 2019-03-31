@@ -3,15 +3,11 @@ import * as ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import store from './store';
-import {AppLayout} from './components/App';
-import {requestPosts, getPosts} from './actions';
-
-store.dispatch(requestPosts());
-store.dispatch(getPosts());
+import App from './components/App';
 
 ReactDOM.render(
     <Provider store={store}>
-        <AppLayout />
+        <App />
     </Provider>,
     document.getElementById('root'),
 );

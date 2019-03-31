@@ -1,12 +1,11 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
 import InfiniteScroll from 'react-infinite-scroller';
 
 import Title from '../../components/Title/Title';
 import Meta from '../../components/Meta/Meta';
 import Text from '../../components/Text/Text';
 import Delimetr from '../../components/Delimetr/Delimetr';
-import Button from '../../components/Button/Button';
+import LinkButton from '../../components/LinkButton/LinkButton';
 
 class Articles extends React.Component {
     constructor(props) {
@@ -18,6 +17,12 @@ class Articles extends React.Component {
 
         this.partLength = 10;
         this.loadMore = this.loadMore.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+
+    handleClick(id) {
+        return () => this.props.getPost(id);
     }
 
     loadMore() {
@@ -45,20 +50,17 @@ class Articles extends React.Component {
                                 <Title>
                                     {post.title}
                                 </Title>
-                                <Meta>
-                                    {`MARCH ${post.id}, 2016 | TRAVEL`}
-                                </Meta>
+                                <Meta id={post.id} />
                                 <Text>
                                     {post.body}
                                 </Text>
-                                <Link to={`/article/${post.id}`} className="nav__link">
-                                    <Button
-                                        modifier="rounded"
-                                        onClick={() => this.props.onClick(post.id)}
-                                    >
-                                        {'Countinue reading'}
-                                    </Button>
-                                </Link>
+                                <LinkButton
+                                    link={`/article/${post.id}`}
+                                    modifier="rounded"
+                                    onClick={this.handleClick(post.id)}
+                                >
+                                    {'Countinue reading'}
+                                </LinkButton>
                                 <Delimetr />
                             </article>
                         ))

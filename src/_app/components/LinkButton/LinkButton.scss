@@ -2,7 +2,8 @@
 
 $lightgray: #d3d3d3;
 
-.button {
+.linkButton {
+	display: inline-block;
 	padding: 0.4 * $atom 1.2 * $atom;
 	margin: 0.5 * $atom 0;
 	border-radius: 4px;
@@ -14,7 +15,7 @@ $lightgray: #d3d3d3;
 	cursor: pointer;
 
 	&.--rounded {
-		padding: 0.25 * $atom 1 * $atom;
+		padding: 0.25 * $atom $atom;
 		border-radius: 50px;
 	}
 

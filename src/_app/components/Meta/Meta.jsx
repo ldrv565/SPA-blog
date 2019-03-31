@@ -4,7 +4,7 @@ import Text from '../Text/Text';
 
 const Meta = props => (
     <Text modifier="meta">
-        {props.children}
+        {`MARCH ${props.id}, 2016 | TRAVEL`}
     </Text>
 );
 
