@@ -23,4 +23,8 @@ $lightgray: #d3d3d3;
 		background: $darkgrey;
 		color: $lightgray;
 	}
+
+	@media ($small) {
+		font-size: 12px;
+	}
 }

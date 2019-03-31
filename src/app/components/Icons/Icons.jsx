@@ -3,10 +3,10 @@ import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 import './Icons.scss';
 
-import facebook from './facebook.svg';
-import instagram from './instagram.svg';
-import github from './github.svg';
-import twitter from './twitter.svg';
+import facebook from '../../../assets/facebook.svg';
+import instagram from '../../../assets/instagram.svg';
+import github from '../../../assets/github.svg';
+import twitter from '../../../assets/twitter.svg';
 
 const Icons = () => (
     <Router>

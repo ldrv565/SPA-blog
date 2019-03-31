@@ -15,7 +15,7 @@ module.exports = (env) => {
 
   return {
     bail: true,
-    entry: ['@babel/polyfill', './src/_app/app.jsx'],
+    entry: ['@babel/polyfill', './src/app/app.jsx'],
     devServer: {
       historyApiFallback: true,
       contentBase: './build',

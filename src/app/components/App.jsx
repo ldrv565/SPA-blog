@@ -4,23 +4,20 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import Aside from './Aside/Aside';
 import Main from './Main/Main';
 
-import store from '../store';
-import {getPosts} from '../actions';
-
 import './App.scss';
 
-class App extends React.Component {
+class App extends React.PureComponent {
     componentDidMount() {
-        store.dispatch(getPosts());
+        this.props.getPosts();
     }
 
     render() {
         return (
             <Router>
-                <div className="app">
+                <section className="app">
                     <Aside />
                     <Main />
-                </div>
+                </section>
             </Router>
         );
     }
