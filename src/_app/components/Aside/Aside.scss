@@ -7,6 +7,7 @@ $lightgray: #9b9b9b;
 	position: fixed;
 	width: 10 * $atom;
 	min-height: 100vh;
+	overflow: auto;
 	background: $darkgrey;
 
 	&__inner {
