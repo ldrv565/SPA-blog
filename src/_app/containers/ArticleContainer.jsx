@@ -5,6 +5,7 @@ import Article from '../pages/Article/Article';
 function mapStateToProps(state) {
     return {
         post: state.post,
+        fetching: state.fetching,
     };
 }
 

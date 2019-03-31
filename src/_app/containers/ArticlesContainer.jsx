@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 
-import {getPost} from '../actions';
+import {getPost, requestPosts} from '../actions';
 import Articles from '../pages/Articles/Articles';
 
 function mapStateToProps(state) {
@@ -12,7 +12,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        onClick: id => dispatch(getPost(id)),
+        onClick: (id) => {
+            dispatch(requestPosts());
+            return dispatch(getPost(id));
+        },
     };
 }
 

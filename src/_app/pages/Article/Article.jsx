@@ -11,39 +11,43 @@ import Button from '../../components/Button/Button';
 
 const Article = props => (
     <section className="container">
-        <article className="article">
-            <section className="article__head">
-                <Title>
-                    {props.post.title}
-                </Title>
-                <Meta>
-                    {`MARCH ${props.post.id}, 2016 | TRAVEL`}
-                </Meta>
-                <Delimetr />
-            </section>
-            <section>
-                <Text modifier="note">
-                    {props.post.body}
-                </Text>
-                <Title modifier="subtitle">
-                    {props.post.title}
-                </Title>
-                <Text>
-                    {props.post.body}
-                </Text>
-                <Title modifier="subtitle">
-                    {props.post.title}
-                </Title>
-                <Text>
-                    {props.post.body}
-                </Text>
-            </section>
-            <section className="article__footer">
-                <Link to="/home" className="nav__link">
-                    <Button>View all posts</Button>
-                </Link>
-            </section>
-        </article>
+        {!props.fetching
+            ? (
+                <article className="article">
+                    <section className="article__head">
+                        <Title>
+                            {props.post.title}
+                        </Title>
+                        <Meta>
+                            {`MARCH ${props.post.id}, 2016 | TRAVEL`}
+                        </Meta>
+                        <Delimetr />
+                    </section>
+                    <section>
+                        <Text modifier="note">
+                            {props.post.body}
+                        </Text>
+                        <Title modifier="subtitle">
+                            {props.post.title}
+                        </Title>
+                        <Text>
+                            {props.post.body}
+                        </Text>
+                        <Title modifier="subtitle">
+                            {props.post.title}
+                        </Title>
+                        <Text>
+                            {props.post.body}
+                        </Text>
+                    </section>
+                    <section className="article__footer">
+                        <Link to="/home" className="nav__link">
+                            <Button>View all posts</Button>
+                        </Link>
+                    </section>
+                </article>
+            )
+            : <div>Загрузка...</div>}
     </section>
 );
 

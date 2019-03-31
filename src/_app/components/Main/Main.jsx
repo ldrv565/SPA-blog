@@ -9,7 +9,8 @@ import ArticleContainer from '../../containers/ArticleContainer';
 
 const Main = () => (
     <main className="main">
-        <Route excact path="/home" component={ArticlesContainer} />
+        <Route exact path="/" component={ArticlesContainer} />
+        <Route path="/home" component={ArticlesContainer} />
         <Route path="/article" component={ArticleContainer} />
         <Route path="/about" component={About} />
     </main>
