@@ -47,7 +47,7 @@ const Article = props => (
                     </section>
                 </article>
             )
-            : <div>Загрузка...</div>}
+            : <div>Loading...</div>}
     </section>
 );
 

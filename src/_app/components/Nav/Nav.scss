@@ -8,6 +8,7 @@ $lightgray: #969696;
 	}
 	&__item {
 		list-style: none;
+		padding: 0.25 * $atom 0;
 	}
 	&__link {
 		color: $lightgray;
