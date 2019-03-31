@@ -1,15 +1,15 @@
-import {REQUEST_POSTS, GET_POSTS, GET_POST} from '../actions';
+import {GET_POSTS, SET_POSTS, SET_POST} from '../actions';
 
 const reducer = (state = false, action) => {
-    if (action.type === REQUEST_POSTS) {
+    if (action.type === GET_POSTS) {
         return true;
     }
 
-    if (action.type === GET_POSTS) {
+    if (action.type === SET_POSTS) {
         return false;
     }
 
-    if (action.type === GET_POST) {
+    if (action.type === SET_POST) {
         return false;
     }
 

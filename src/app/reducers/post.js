@@ -1,8 +1,8 @@
-import {GET_POST} from '../actions';
+import {SET_POST} from '../actions';
 
 const reducer = (state = {}, action) => {
-    if (action.type === GET_POST) {
-        return action.post;
+    if (action.type === SET_POST) {
+        return {...state, ...action.payload};
     }
 
     return state;

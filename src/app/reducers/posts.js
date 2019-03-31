@@ -1,8 +1,8 @@
-import {GET_POSTS} from '../actions';
+import {SET_POSTS} from '../actions';
 
 const reducer = (state = [], action) => {
-    if (action.type === GET_POSTS) {
-        return action.posts;
+    if (action.type === SET_POSTS) {
+        return action.payload.posts;
     }
 
     return state;

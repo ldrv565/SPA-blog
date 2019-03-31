@@ -11,7 +11,9 @@ import LinkButton from '../../components/LinkButton/LinkButton';
 class Article extends React.PureComponent {
     componentDidMount() {
         const {postId} = this.props.match.params;
-        this.props.getPost(postId);
+        if (parseInt(postId, 10) !== this.props.post.id) {
+            this.props.getPost(postId);
+        }
     }
 
     render() {

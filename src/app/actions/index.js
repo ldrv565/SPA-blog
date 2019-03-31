@@ -1,20 +1,22 @@
 import axios from 'axios';
 
-export const REQUEST_POSTS = 'REQUEST_POSTS';
 export const GET_POSTS = 'GET_POSTS';
-export const GET_POST = 'GET_POST';
+export const SET_POSTS = 'SET_POSTS';
+export const SET_POST = 'SET_POST';
 
 export function getPosts() {
     return (dispatch) => {
         dispatch({
-            type: REQUEST_POSTS,
+            type: GET_POSTS,
         });
 
         return axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.data)
             .then(posts => dispatch({
-                type: GET_POSTS,
-                posts,
+                type: SET_POSTS,
+                payload: {
+                    posts,
+                },
             }));
     };
 }
@@ -22,14 +24,16 @@ export function getPosts() {
 export function getPost(id) {
     return (dispatch) => {
         dispatch({
-            type: REQUEST_POSTS,
+            type: GET_POSTS,
         });
 
         return axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
             .then(response => response.data)
             .then(post => dispatch({
-                type: GET_POST,
-                post,
+                type: SET_POST,
+                payload: {
+                    ...post,
+                },
             }));
     };
 }
