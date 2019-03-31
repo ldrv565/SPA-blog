@@ -1,26 +1,22 @@
 import * as React from 'react';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import './Nav.scss';
 
-import Text from '../Text/Text';
-
 const Nav = () => (
     <nav className="nav">
-        <Router>
-            <div>
+        <ul className="nav__list">
+            <li className="nav__item">
                 <Link to="/home" className="nav__link">
-                    <Text>
-                        {'home'}
-                    </Text>
+                    {'home'}
                 </Link>
+            </li>
+            <li className="nav__item">
                 <Link to="/about" className="nav__link">
-                    <Text>
-                        {'About'}
-                    </Text>
+                    {'About'}
                 </Link>
-            </div>
-        </Router>
+            </li>
+        </ul>
     </nav>
 );
 

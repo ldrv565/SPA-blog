@@ -1,12 +1,17 @@
 import * as React from 'react';
+import {Route} from 'react-router-dom';
 
 import './Main.scss';
 
-import Article from '../../pages/Article/Article';
+import About from '../../pages/About/About';
+import ArticlesContainer from '../../containers/ArticlesContainer';
+import ArticleContainer from '../../containers/ArticleContainer';
 
 const Main = () => (
     <main className="main">
-        <Article />
+        <Route excact path="/home" component={ArticlesContainer} />
+        <Route path="/article" component={ArticleContainer} />
+        <Route path="/about" component={About} />
     </main>
 );
 
