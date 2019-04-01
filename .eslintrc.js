@@ -32,5 +32,6 @@ module.exports = {
 		"react/prop-types": 0,
 		"react/destructuring-assignment": 0,
 		"linebreak-style": ["error", "windows"],
+		"no-console": ["error", { allow: ["error"]}],
 	}
 };
