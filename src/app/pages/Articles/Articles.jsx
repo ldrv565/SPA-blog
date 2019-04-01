@@ -1,6 +1,7 @@
 import * as React from 'react';
 import InfiniteScroll from 'react-infinite-scroller';
 
+import Content from '../../components/Content/Content';
 import Title from '../../components/Title/Title';
 import Meta from '../../components/Meta/Meta';
 import Text from '../../components/Text/Text';
@@ -31,7 +32,7 @@ class Articles extends React.Component {
 
     render() {
         return (
-            <section className="container">
+            <Content>
                 <InfiniteScroll
                     pageStart={0}
                     loadMore={this.loadMore}
@@ -41,14 +42,14 @@ class Articles extends React.Component {
                     {
                         this.state.posts.map(post => (
                             <article key={post.id}>
-                                <Title>
+                                <Title h={2}>
                                     {post.title}
                                 </Title>
                                 <Meta id={post.id} />
                                 <Text>
                                     {post.body}
                                 </Text>
-                                <LinkButton link={`/article/${post.id}`} modifier="rounded">
+                                <LinkButton link={`/post/${post.id}`} modifier="rounded">
                                     {'Countinue reading'}
                                 </LinkButton>
                                 <Delimetr />
@@ -56,7 +57,7 @@ class Articles extends React.Component {
                         ))
                     }
                 </InfiniteScroll>
-            </section>
+            </Content>
         );
     }
 }

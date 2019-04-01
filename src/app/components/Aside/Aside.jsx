@@ -30,7 +30,7 @@ class Aside extends React.Component {
             <React.Fragment>
                 <aside className={calssnames('aside', {'--active': this.state.active})}>
                     <section className="aside__inner">
-                        <Title className="aside__title">
+                        <Title className="aside__title" h={2}>
                             {'My personal blog'}
                         </Title>
                         <Text className="aside__text">

@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import './Article.scss';
 
+import Content from '../../components/Content/Content';
 import Title from '../../components/Title/Title';
 import Meta from '../../components/Meta/Meta';
 import Text from '../../components/Text/Text';
@@ -18,7 +19,7 @@ class Article extends React.PureComponent {
 
     render() {
         return (
-            <section className="container">
+            <Content>
                 {!this.props.fetching
                     ? (
                         <article className="article">
@@ -33,13 +34,13 @@ class Article extends React.PureComponent {
                                 <Text modifier="note">
                                     {this.props.post.body}
                                 </Text>
-                                <Title modifier="subtitle">
+                                <Title modifier="subtitle" h={3}>
                                     {this.props.post.title}
                                 </Title>
                                 <Text>
                                     {this.props.post.body}
                                 </Text>
-                                <Title modifier="subtitle">
+                                <Title modifier="subtitle" h={3}>
                                     {this.props.post.title}
                                 </Title>
                                 <Text>
@@ -52,7 +53,7 @@ class Article extends React.PureComponent {
                         </article>
                     )
                     : <div>Loading...</div>}
-            </section>
+            </Content>
         );
     }
 }

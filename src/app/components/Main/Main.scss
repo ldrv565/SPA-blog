@@ -10,13 +10,3 @@
 		padding-left: 0;
 	}
 }
-
-.container {
-	padding: $atom;
-	padding-bottom: 0;
-	box-sizing: border-box;
-	@media ($medium) {
-		padding-left: 40px;
-		margin-left: $atom;
-	}
-}

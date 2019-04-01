@@ -10,7 +10,7 @@ import ArticleConnector from '../../connectors/ArticleConnector';
 const Main = () => (
     <main className="main">
         <Route exact path="/" component={ArticlesConnector} />
-        <Route path="/article/:postId" component={ArticleConnector} />
+        <Route path="/post/:postId" component={ArticleConnector} />
         <Route path="/about" component={About} />
     </main>
 );
